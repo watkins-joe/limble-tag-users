@@ -1,0 +1,27 @@
+.main {
+  background-color: rgb(64, 68, 75);
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin: auto;
+  width: auto;
+}
+
+input {
+  height: 42px;
+  width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #dcddee;
+  color: #3d3d3d;
+  &:focus {
+    outline: none;
+    border: 4px solid #89aaff;
+  }
+}

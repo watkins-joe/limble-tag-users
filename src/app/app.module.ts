@@ -3,10 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CommentListComponent } from './comment-list/comment-list.component';
+import { CommentComponent } from './comment/comment.component';
+import { AutocompleteDropdownComponent } from './autocomplete-dropdown/autocomplete-dropdown.component';
+import { UserEntryComponent } from './user-entry/user-entry.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CommentListComponent,
+    CommentComponent,
+    AutocompleteDropdownComponent,
+    UserEntryComponent
   ],
   imports: [
     BrowserModule,
