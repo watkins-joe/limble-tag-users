@@ -37,3 +37,12 @@ MVP
 4. already existing comments
 5. alert specific user when entered into a comment, on creation or on addition to the 'comments' array
    1. done with javascript alert() function for simplicity, alert that user's name and ID (?)
+
+Checklist
+
+- [x] input field to type text into
+- [ ] autocomplete shell/box
+- [ ] member list divs with name
+- [ ] already existing comments
+- [ ] alert specific user when entered into a comment, on creation or on addition to the 'comments' array
+  - done with javascript alert() function for simplicity, alert that user's name and ID (?)

@@ -7,6 +7,7 @@ import { CommentListComponent } from './comment-list/comment-list.component';
 import { CommentComponent } from './comment/comment.component';
 import { AutocompleteDropdownComponent } from './autocomplete-dropdown/autocomplete-dropdown.component';
 import { UserEntryComponent } from './user-entry/user-entry.component';
+import { InputComponent } from './input/input.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { UserEntryComponent } from './user-entry/user-entry.component';
     CommentListComponent,
     CommentComponent,
     AutocompleteDropdownComponent,
-    UserEntryComponent
+    UserEntryComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
