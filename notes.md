@@ -29,6 +29,24 @@ discord:
 
 8. as you type your search query, the div at the top saying 'members' begins to add your search query as you type it. members matching '@john' when you have '@john' typed into the input field. this isn't required.
 
+more details about `@`
+
+example where menu does not open:
+`s@`
+
+does open:
+`s @`
+
+check for empty character ` ` in string
+
+any additional `@`s after the initial @ closes the menu
+
+`@@@@@@@`
+
+menu goes away when moving cursor before the @ symbol, and outside of the "character group" with the @ (`@bob`)
+
+adding a space after the character group also closes the menu, as it is not part of the @ group anymore.
+
 MVP
 
 1. input field to type text into
