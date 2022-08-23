@@ -6,4 +6,25 @@
   background-color: $bg-snow;
   border-radius: $br-med;
   padding: $pd-med;
+  position: absolute;
+  bottom: calc(100% + 8px);
+  color: $font-color-main;
+
+  .title {
+    font-variant: small-caps;
+    font-size: 0.85rem;
+    padding: $pd-med;
+    border-bottom: 1px solid #8080802b;
+    margin-bottom: 0.55rem;
+  }
+
+  .user-row {
+    padding: $pd-med;
+    border-radius: $br-med;
+
+    &:hover {
+      background-color: #a5a6b4;
+      cursor: pointer;
+    }
+  }
 }
