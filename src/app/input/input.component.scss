@@ -1,10 +1,12 @@
+@import "../../styles.scss";
+
 input {
   height: 42px;
   width: 400px;
-  padding: 10px;
-  border-radius: 5px;
+  padding: $pd-med;
+  border-radius: $br-med;
   border: none;
-  background-color: #dcddee;
+  background-color: $bg-snow;
   color: #3d3d3d;
   &:focus {
     outline: none;

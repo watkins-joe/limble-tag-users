@@ -10,7 +10,15 @@ export class InputComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  tagCheck(e: any) {
-    console.log(e.target.value);
+  tagCheck(e: Event) {
+    const target = e.target as HTMLInputElement;
+
+    console.log(`value: ${target.value}`);
+
+    console.log(`target: ${e.target}`);
+
+    if (target.value.includes('@')) {
+      console.log('open menu');
+    }
   }
 }
