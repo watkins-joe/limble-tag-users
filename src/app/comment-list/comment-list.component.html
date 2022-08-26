@@ -1,1 +1,7 @@
-<p>comment-list works!</p>
+<div class="comment-list">
+  <div class="comment-title">Comments</div>
+  <div class="comment" *ngFor="let comment of comments">
+    <span class="comment-text">{{ comment.commentText }}</span>
+    <span class="comment-info">{{ comment.author }} - {{ comment.date }}</span>
+  </div>
+</div>

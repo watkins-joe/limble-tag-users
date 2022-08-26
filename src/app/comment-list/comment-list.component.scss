@@ -1,0 +1,28 @@
+@import "../../styles.scss";
+
+.comment-list {
+  background-color: $bg-snow;
+  padding: $pd-med;
+  border-radius: $br-med;
+  color: $font-color-main;
+
+  .comment-title {
+    padding: $pd-med;
+    font-variant: small-caps;
+    margin-bottom: 0.55rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  .comment {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.168627451);
+    padding: $pd-med;
+    font-weight: 300;
+  }
+
+  :last-child {
+    border-bottom: none;
+  }
+}
