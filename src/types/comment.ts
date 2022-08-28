@@ -1,10 +1,10 @@
-export interface Comment {
+export interface JobComment {
   commentText: string;
   author: string;
   date: Date | string;
 }
 
-export let commentList: Comment[] = [
+export let commentList: JobComment[] = [
   {
     commentText: 'This Task was assigned to Daryl Babb',
     author: 'System',
