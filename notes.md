@@ -51,6 +51,10 @@ styling for tagging
 
 change the tag text to bold or some kind of visually different style to denote that it is a user tag and not regular text
 
+autofocusing in autocomplete when `@` entered into chat before tagging a user
+
+- first user in the autocomplete list is automatically focused and you are able to navigate the list of users with the up and down arrow keys. pressing <kbd>Enter<kbd> will enter that user's name into the text field **with a space after their name as well**
+
 MVP
 
 1. input field to type text into
