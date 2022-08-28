@@ -1,6 +1,6 @@
 @import "../../styles.scss";
 
-.comment-list {
+.comments-container {
   background-color: $bg-snow;
   padding: $pd-med;
   border-radius: $br-med;
@@ -12,6 +12,10 @@
     margin-bottom: 0.55rem;
     font-weight: 600;
     font-size: 1.25rem;
+  }
+
+  .comment-list {
+    margin-bottom: 3rem;
   }
 
   .comment {

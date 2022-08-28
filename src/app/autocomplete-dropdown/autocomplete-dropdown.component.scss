@@ -3,11 +3,11 @@
 .autocomplete {
   width: 100%;
   max-height: 10rem;
-  background-color: $bg-snow;
+  background-color: $bg-wet-snow;
   border-radius: $br-med;
   padding: $pd-med;
-  position: absolute;
-  bottom: calc(100% + 8px);
+  position: relative;
+  bottom: 8px;
   color: $font-color-main;
 
   .title {
