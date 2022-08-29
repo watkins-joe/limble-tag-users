@@ -55,6 +55,19 @@ autofocusing in autocomplete when `@` entered into chat before tagging a user
 
 - first user in the autocomplete list is automatically focused and you are able to navigate the list of users with the up and down arrow keys. pressing <kbd>Enter<kbd> will enter that user's name into the text field **with a space after their name as well**
 
+looking up user names in comment string -- how will we do that?
+
+what we know:
+
+1. users list is an array of User objects, userID and name
+2. they are not alphabetical, but are listed in ascending order by userID.
+3. each user has a name that we need to match to our comment. if our comment contains one of those usernames, we need to notify the user OR users mentioned in the comment
+   1. whether we could mention more than one user in a comment was an edge case that was not clear, but i would have asked if this was done live
+   2. we could do this by splitting the comment by spaces in separate words and checking if each word is a user in the array of words in the comment and if it is a match, we can notify the user.
+      1. we would do a object property lookup in the users list instead of an array, as object property lookup is O(1) TC whereas array.includes() is O(N). this would take more space though, as we need to just store a list of names.
+         1. what if two users had the same name but different IDs? this could be a problem in the future.
+            1. if we build another object with `userName` as key and ID as a value, in the event of ties, we could check the userID. this also allows us to do object property lookup O(1) on just the name portion.
+
 MVP
 
 1. input field to type text into

@@ -61,5 +61,22 @@ export class InputComponent implements OnInit {
     target.value = '';
 
     console.log(target.value);
+    console.log(userList);
+
+    let userDir: Record<string, number> = {
+      Kevin: 1,
+      Jeff: 2,
+      Bryan: 3,
+      Gabbey: 4,
+    };
+
+    // get most recently pushed comment
+    let commentArray =
+      commentList[commentList.length - 1].commentText.split(' ');
+
+    // this only looks for the name. if an @ precedes the name, this fails to work. '@Bryan' does not work, 'Bryan' does
+    commentArray.forEach(function (word: string) {
+      if (userDir[word]) console.warn(word);
+    });
   }
 }
