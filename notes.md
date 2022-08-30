@@ -68,6 +68,10 @@ what we know:
          1. what if two users had the same name but different IDs? this could be a problem in the future.
             1. if we build another object with `userName` as key and ID as a value, in the event of ties, we could check the userID. this also allows us to do object property lookup O(1) on just the name portion.
 
+styling the tagged user in the comment string
+
+1. would likely have to access the `innerHTML` and modify that on the fly? make it bold somehow like in example. could target with a span, but not sure how that would work right now.
+
 MVP
 
 1. input field to type text into
