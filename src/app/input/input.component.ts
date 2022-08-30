@@ -63,7 +63,7 @@ export class InputComponent implements OnInit {
     console.log(target.value);
     console.log(userList);
 
-    let userDir: Record<string, number> = {
+    const userDir: Record<string, number> = {
       Kevin: 1,
       Jeff: 2,
       Bryan: 3,
@@ -75,8 +75,11 @@ export class InputComponent implements OnInit {
       commentList[commentList.length - 1].commentText.split(' ');
 
     // this only looks for the name. if an @ precedes the name, this fails to work. '@Bryan' does not work, 'Bryan' does
-    commentArray.forEach(function (word: string) {
-      if (userDir[word]) console.warn(word);
+    // fixed this. now, checking the first letter of string. if '@' and word following '@Bryan' (Bryan), alert the name
+    commentArray.forEach(function (word: string, index) {
+      if (userDir[word.slice(1)] && word[0] === '@') {
+        alert(`${word} has been alerted`);
+      }
     });
   }
 }
