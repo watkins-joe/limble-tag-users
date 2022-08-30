@@ -76,7 +76,7 @@ export class InputComponent implements OnInit {
 
     // this only looks for the name. if an @ precedes the name, this fails to work. '@Bryan' does not work, 'Bryan' does
     // fixed this. now, checking the first letter of string. if '@' and word following '@Bryan' (Bryan), alert the name
-    commentArray.forEach(function (word: string, index) {
+    commentArray.forEach((word: string, index) => {
       if (userDir[word.slice(1)] && word[0] === '@') {
         alert(`${word} has been alerted`);
       }
