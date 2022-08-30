@@ -1,4 +1,3 @@
-import { TaggedTemplateExpr } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { commentList, JobComment } from 'src/types/comment';
 import { userList } from 'src/types/user';
