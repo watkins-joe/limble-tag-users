@@ -75,17 +75,22 @@ styling the tagged user in the comment string
 MVP
 
 1. input field to type text into
-2. autocomplete shell/box
-3. member list divs with name
-4. already existing comments
-5. alert specific user when entered into a comment, on creation or on addition to the 'comments' array
+2. already existing comments
+3. alert specific user when entered into a comment, on creation or on addition to the 'comments' array
    1. done with javascript alert() function for simplicity, alert that user's name and ID (?)
 
-Checklist
+MVP Checklist
 
-- [x] input field to type text into
-- [ ] autocomplete shell/box
-- [ ] member list divs with name
-- [ ] already existing comments
-- [ ] alert specific user when entered into a comment, on creation or on addition to the 'comments' array
+- [x] A list of comments
+- [x] A field that can allow people to add new comments
+- [x] The field should be able to detect when you type in someone's name starting with an @ like slack does
+- [x] When the entry is entered it needs to detect which user was typed in and trigger a javascript function that alerts their name
   - done with javascript alert() function for simplicity, alert that user's name and ID (?)
+
+nice to haves:
+
+- [x] autocomplete dropdown/dropup
+- [x] autocomplete shell/box
+- [x] member list divs with name
+- [ ] autofocusing on first name in autocomplete when suggested
+- [ ] name suggestion algorithm that gets more specific and dynamically renders more specific user divs in dropup as you type in more letters, eventually having only one or a few users/one user left who matches, or nothing at all.
