@@ -2,9 +2,14 @@
   <div class="autocomplete" *ngIf="showAutocomplete">
     <div class="title">Users</div>
 
-    <div class="user-row" tabindex="0" *ngFor="let user of users">
+    <div
+      class="user-row"
+      tabindex="0"
+      *ngFor="let user of users"
+      (click)="tagUser($event, user.name)"
+    >
       {{ user.name }}
     </div>
   </div>
-  <input (keyup.enter)="onCommentSubmit($event)" (change)="tagCheck($event)" />
+  <input (keyup.enter)="onCommentSubmit($event)" (input)="tagCheck($event)" />
 </div>

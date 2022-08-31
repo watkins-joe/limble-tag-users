@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { commentList, JobComment } from 'src/types/comment';
 import { userList } from 'src/types/user';
 
@@ -10,7 +10,18 @@ import { userList } from 'src/types/user';
 export class InputComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {}
+  @HostListener('userClick', ['$event']) testFunction($event: Event) {
+    let inputVal = document.querySelector('input')?.value;
+    console.log(inputVal);
+  }
+
+  ngOnInit(): void {
+    document
+      .querySelector('input')
+      ?.addEventListener('userClick', (e: Event) => {
+        console.log(e);
+      });
+  }
 
   users = userList;
 
@@ -25,9 +36,26 @@ export class InputComponent implements OnInit {
 
     console.log(`target: ${e.target}`);
 
+    console.log(`cursor position: ${target.selectionStart}`);
+
     if (target.value.includes('@')) {
       console.log('open menu');
+      this.showAutocomplete = true;
+    } else {
+      this.showAutocomplete = false;
     }
+  }
+
+  tagUser(e: Event, userName: string) {
+    console.log(`clicked on user: ${userName}`);
+    const target = e.currentTarget as HTMLDivElement;
+    console.log(target.textContent?.trim());
+    this.showAutocomplete = false;
+
+    let input = document.querySelector('input');
+    input!.value += `${userName} `;
+
+    input!.focus();
   }
 
   onCommentSubmit(e: Event) {
