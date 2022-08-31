@@ -1,1 +1,10 @@
-<input (keyup.enter)="onCommentSubmit($event)" />
+<div>
+  <div class="autocomplete" *ngIf="showAutocomplete">
+    <div class="title">Users</div>
+
+    <div class="user-row" tabindex="0" *ngFor="let user of users">
+      {{ user.name }}
+    </div>
+  </div>
+  <input (keyup.enter)="onCommentSubmit($event)" (change)="tagCheck($event)" />
+</div>

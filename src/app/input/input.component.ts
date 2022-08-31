@@ -16,6 +16,8 @@ export class InputComponent implements OnInit {
 
   comments = commentList;
 
+  showAutocomplete = false;
+
   tagCheck(e: Event) {
     const target = e.target as HTMLInputElement;
 
